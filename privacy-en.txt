@@ -1,0 +1,103 @@
+Privacy Policy for 云中子 (agentlint)
+
+Effective date: 2026-09-18
+
+
+1. Overview
+
+云中子 (agentlint) is an AI coding assistant client that runs on your device. It is
+designed as a tool: you provide the model endpoint, the workspace files and the target
+hosts, and the app performs operations only within the scope you specify.
+
+云中子 has no cloud account system. It does not require registration or sign-in, and it
+does not maintain any user database operated by the developer.
+
+
+2. Information we do not collect
+
+- No personally identifiable information such as name, phone number, email address,
+  contacts or call history
+- No account registration, and no tracking via advertising identifiers (IDFA)
+- Your file contents, source code or conversations are never uploaded to any server
+  operated by the developer
+- No advertising, and no third-party advertising or analytics SDKs
+
+
+3. Information you provide, and where it goes
+
+The core features of 云中子 depend on service endpoints that you configure yourself,
+so you alone decide where your data goes:
+
+1. Model service
+   The large model API endpoint and key that you enter in Settings. When you start a
+   conversation or invoke a tool, the conversation content, code snippets and tool
+   output are sent to the endpoint you specified. How that data is handled depends on
+   that provider's policy; please refer to the privacy policy of the provider you choose.
+
+2. SSH hosts
+   The host address, port, user name and key that you add are used only to connect to
+   your own hosts, and are stored on your device.
+
+3. MCP services
+   Requests are sent only to the MCP endpoints that you configure (these may be local
+   network or remote addresses).
+
+4. Optional self-hosted proxy component
+   The project source includes an optional proxy component that you may deploy yourself
+   to forward and measure model calls. If you deploy it and point your model requests
+   at it, the traffic passes through your own server. We do not provide a hosted
+   version of this component.
+
+
+4. Data stored on your device
+
+The following data is stored locally on your device (SwiftData and the app sandbox):
+
+- Workspace files and directories, and file edit history
+- Sessions, conversations, skills and prompts
+- Model endpoints and keys, SSH host configuration, MCP service configuration
+- App runtime logs and event records (used only for local troubleshooting)
+
+You can remove any of these by deleting the corresponding item in the app; uninstalling
+the app removes all local data.
+
+
+5. Device permissions and how they are used
+
+云中子 requests system permissions only for the purposes below, and each one can be
+denied in system settings:
+
+- Local network: to connect to MCP services on the same local network
+- Photo library (add only): to save images from the workspace to your photo library
+- Media library: to search for and play songs from your Music app
+- Location (when in use): to obtain the current location for displaying the connected
+  Wi-Fi name
+- Notifications: to alert you locally about task results (no server-side push)
+- Clipboard: read or written only when you explicitly invoke a copy or paste action
+
+Denying a permission only disables the corresponding feature; all other features
+continue to work.
+
+
+6. Data retention and deletion
+
+We keep no copies of your data. All data stays on your device and on the services you
+choose yourself. You may delete sessions, files or configuration at any time inside the
+app; uninstalling the app deletes all local data.
+
+
+7. Children's privacy
+
+云中子 is intended for developers, not for children under 13, and we do not knowingly
+collect personal information from children.
+
+
+8. Changes to this policy
+
+If we make material changes to this policy, we will note them in the release notes of a
+new version and update the effective date at the top.
+
+
+9. Contact us
+
+If you have any questions about this policy, please contact: [your contact email]
