@@ -1,15 +1,15 @@
-Privacy Policy for 云中子 (agentlint)
+Privacy Policy for Codelint
 
 Effective date: 2026-09-18
 
 
 1. Overview
 
-云中子 (agentlint) is an AI coding assistant client that runs on your device. It is
+Codelint is an AI coding assistant client that runs on your device. It is
 designed as a tool: you provide the model endpoint, the workspace files and the target
 hosts, and the app performs operations only within the scope you specify.
 
-云中子 has no cloud account system. It does not require registration or sign-in, and it
+Codelint has no cloud account system. It does not require registration or sign-in, and it
 does not maintain any user database operated by the developer.
 
 
@@ -25,7 +25,7 @@ does not maintain any user database operated by the developer.
 
 3. Information you provide, and where it goes
 
-The core features of 云中子 depend on service endpoints that you configure yourself,
+The core features of Codelint depend on service endpoints that you configure yourself,
 so you alone decide where your data goes:
 
 1. Model service
@@ -64,7 +64,7 @@ the app removes all local data.
 
 5. Device permissions and how they are used
 
-云中子 requests system permissions only for the purposes below, and each one can be
+Codelint requests system permissions only for the purposes below, and each one can be
 denied in system settings:
 
 - Local network: to connect to MCP services on the same local network
@@ -88,7 +88,7 @@ app; uninstalling the app deletes all local data.
 
 7. Children's privacy
 
-云中子 is intended for developers, not for children under 13, and we do not knowingly
+Codelint is intended for developers, not for children under 13, and we do not knowingly
 collect personal information from children.
 
 
@@ -100,4 +100,4 @@ new version and update the effective date at the top.
 
 9. Contact us
 
-If you have any questions about this policy, please contact: [your contact email]
+If you have any questions about this policy, please contact: codelint@foxmail.com

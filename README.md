@@ -1,11 +1,11 @@
-# agentlint · 云中子
+# Codelint · 码灵
 
-> 本仓库用于存放 **云中子（agentlint）对外公开的资料**（隐私政策、使用条款等）。
+> 本仓库用于存放 **码灵（Codelint）对外公开的资料**（隐私政策、使用条款等）。
 > 应用源码不在此仓库。
 
 ## 项目简介
 
-云中子（agentlint）是一款运行在 iPhone 上的 AI 编程助手。
+码灵（Codelint）是一款运行在 iPhone 上的 AI 编程助手。
 
 它把文件读写、目录浏览、代码搜索、Git 操作、SSH 远程执行、MCP 工具扩展等能力交给
 AI，让你可以用自然语言在手机上查看和修改代码、管理仓库、运行脚本。
@@ -34,4 +34,4 @@ SwiftUI + SwiftData，部署目标 iOS 26.2，Swift 5.0。
 
 ## 联系方式
 
-[待填写]
+codelint@foxmail.com
