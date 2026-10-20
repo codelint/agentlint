@@ -5,7 +5,7 @@
 
 ## 项目简介
 
-码灵（Codelint）是一款运行在 iPhone 上的 AI 编程助手。
+码灵（Codelint）是一款运行在 iPhone 与 iPad 上的 AI 编程助手。
 
 它把文件读写、目录浏览、代码搜索、Git 操作、SSH 远程执行、MCP 工具扩展等能力交给
 AI，让你可以用自然语言在手机上查看和修改代码、管理仓库、运行脚本。
@@ -17,12 +17,12 @@ AI，让你可以用自然语言在手机上查看和修改代码、管理仓库
 - **Git**：状态、差异、提交、分支、标签、推送与拉取
 - **SSH**：连接远程主机执行命令、上传与下载文件
 - **MCP**：接入外部 MCP 服务，持续扩展工具能力
-- **工具结果卡片**：内置 Blade 模板引擎，把工具输出渲染成可读界面
+- **工具结果卡片**：内置模板引擎，把工具输出渲染成可读界面
 - **多语言与主题**：中英文界面切换，支持自定义配色与字体
 
 ### 技术栈
 
-SwiftUI + SwiftData，部署目标 iOS 26.2，Swift 5.0。
+SwiftUI + SwiftData，Swift 5.0。
 
 ## 隐私政策
 
@@ -31,6 +31,18 @@ SwiftUI + SwiftData，部署目标 iOS 26.2，Swift 5.0。
 | 简体中文 | [privacy/privacy-zh.txt](privacy/privacy-zh.txt) |
 | 繁体中文 | [privacy/privacy-zh-Hant.txt](privacy/privacy-zh-Hant.txt) |
 | English | [privacy/privacy-en.txt](privacy/privacy-en.txt) |
+
+生效日期：2026-10-20
+
+## 使用条款
+
+| 语言 | 文件 |
+|---|---|
+| 简体中文 | [terms/terms-zh.txt](terms/terms-zh.txt) |
+| 繁体中文 | [terms/terms-zh-Hant.txt](terms/terms-zh-Hant.txt) |
+| English | [terms/terms-en.txt](terms/terms-en.txt) |
+
+生效日期：2026-10-20
 
 ## 联系方式
 

@@ -1,52 +1,109 @@
 Privacy Policy for Codelint
 
-Effective date: 2026-09-18
+Effective date: 2026-10-20
 
 
 1. Overview
 
-Codelint is an AI coding assistant client that runs on your device. It is
-designed as a tool: you provide the model endpoint, the workspace files and the target
-hosts, and the app performs operations only within the scope you specify.
+Codelint is an AI coding assistant client for iPhone and iPad. It is designed as a tool:
+you provide the model endpoint, the workspace files and the target hosts, and the app
+performs operations only within the scope you specify.
 
-Codelint has no cloud account system. It does not require registration or sign-in, and it
-does not maintain any user database operated by the developer.
+Codelint can be used in two ways:
 
+1. Bring your own model: you enter your own large-model API endpoint and key, and your
+   conversations go directly from your device to that endpoint. We are not involved.
+2. Built-in models: after signing in, you may use the built-in model quota we provide. In
+   that case your conversation content is relayed through our server to the model provider.
 
-2. Information we do not collect
-
-- No personally identifiable information such as name, phone number, email address,
-  contacts or call history
-- No account registration, and no tracking via advertising identifiers (IDFA)
-- Your file contents, source code or conversations are never uploaded to any server
-  operated by the developer
-- No advertising, and no third-party advertising or analytics SDKs
+To provide accounts, subscription quota and built-in models, Codelint operates a
+developer-run server (https://ios.codelint.com). Except for the items listed below, we do
+not collect, store or upload your files, source code or conversation content.
 
 
-3. Information you provide, and where it goes
+2. Information we collect
 
-The core features of Codelint depend on service endpoints that you configure yourself,
-so you alone decide where your data goes:
+2.1 Account information (collected when you sign in)
+
+Signing in is optional: the full feature set of bring-your-own-model works without an
+account.
+
+- Sign in with Apple: we receive the user identifier (sub) provided by Apple, plus your
+  email (which may be Apple's private relay address) and name if you choose to share them.
+- Email code sign-in: we receive the email address you enter and send a one-time code to
+  that address.
+
+2.2 Sign-in credentials and devices
+
+- After sign-in, the server issues an access credential (secret) that is stored only in
+  your device's secure storage (Keychain).
+- To display and manage sign-in devices, the server records the client-generated device
+  identifier (duid), the most recent sign-in time and the source IP address.
+
+2.3 Subscriptions and purchases
+
+Subscriptions are purchased through Apple App Store in-app purchase. We never receive your
+payment method, card number or billing address. We only receive the transaction from Apple
+to verify the subscription tier and expiry date, and we store your tier and quota on our
+server.
+
+2.4 Built-in model calls (when signed in and using built-in quota)
+
+When you use a built-in model, conversation content, tool-call arguments and tool results
+are relayed through our server to the model provider. The server only records usage
+information needed for quota accounting: model name, upstream domain, request ID, request
+size in bytes, token usage, response status and latency.
+
+The server does not store conversation content, source code or tool result content.
+
+2.5 Feedback (only when you submit it)
+
+When you submit feedback in the app, we receive the title, the body, any contact details
+you choose to provide, and client environment information (app version and build, OS
+version, device model, language and region, time zone, free storage, current persona
+name). Environment information is used to reproduce problems and never includes your
+workspace or conversation content.
+
+2.6 Usage and quota
+
+The server records, per account, the number of built-in model calls and token usage, to
+settle and display your quota.
+
+2.7 What we do not do
+
+- No advertising identifier (IDFA) and no cross-app tracking
+- No third-party advertising SDKs and no third-party analytics SDKs
+- No access to contacts, call history or messages
+- No background location tracking
+- We never sell or rent your personal information
+
+
+3. Services you configure yourself
+
+The following data goes where you decide; we neither receive nor retain it:
 
 1. Model service
-   The large model API endpoint and key that you enter in Settings. When you start a
-   conversation or invoke a tool, the conversation content, code snippets and tool
-   output are sent to the endpoint you specified. How that data is handled depends on
-   that provider's policy; please refer to the privacy policy of the provider you choose.
+   The large-model API endpoint and key you enter in Settings. When you start a
+   conversation or invoke a tool, the conversation content, code snippets and tool output
+   are sent to the endpoint you specified. How that data is handled depends on that
+   provider's policy; please refer to the privacy policy of the provider you choose.
+   To help the model provider diagnose calls, request headers carry a User-Agent with the
+   app name and version, OS version, device model and system locale. They never include
+   your account, IP address, device unique identifier or conversation content.
 
 2. SSH hosts
-   The host address, port, user name and key that you add are used only to connect to
-   your own hosts, and are stored on your device.
+   The host address, port, user name and key that you add are used only to connect to your
+   own hosts, and are stored on your device.
 
 3. MCP services
    Requests are sent only to the MCP endpoints that you configure (these may be local
    network or remote addresses).
 
 4. Optional self-hosted proxy component
-   The project source includes an optional proxy component that you may deploy yourself
-   to forward and measure model calls. If you deploy it and point your model requests
-   at it, the traffic passes through your own server. We do not provide a hosted
-   version of this component.
+   The project source includes an optional proxy component that you may deploy yourself to
+   forward and measure model calls. If you deploy it and point your model requests at it,
+   the traffic passes through your own server. We do not provide a hosted version of this
+   component.
 
 
 4. Data stored on your device
@@ -56,6 +113,7 @@ The following data is stored locally on your device (SwiftData and the app sandb
 - Workspace files and directories, and file edit history
 - Sessions, conversations, skills and prompts
 - Model endpoints and keys, SSH host configuration, MCP service configuration
+- Sign-in credential (Keychain only)
 - App runtime logs and event records (used only for local troubleshooting)
 
 You can remove any of these by deleting the corresponding item in the app; uninstalling
@@ -70,34 +128,69 @@ denied in system settings:
 - Local network: to connect to MCP services on the same local network
 - Photo library (add only): to save images from the workspace to your photo library
 - Media library: to search for and play songs from your Music app
-- Location (when in use): to obtain the current location for displaying the connected
-  Wi-Fi name
+- Microphone and speech recognition: to turn your speech into text in the input box
+- Location (when in use): your approximate location is obtained only when you explicitly
+  ask a question that needs location context (for example "the network environment near
+  me", "my current location" or "cafes nearby"), to be used as conversation context sent
+  to the AI, and to display the Wi-Fi network you are connected to. Your location is never
+  tracked in the background.
 - Notifications: to alert you locally about task results (no server-side push)
-- Clipboard: read or written only when you explicitly invoke a copy or paste action
+- Clipboard: written only when you actively tap a Copy button in the interface. The app
+  does not provide any AI tool that reads the clipboard automatically, and never reads
+  clipboard contents without your confirmation.
 
-Denying a permission only disables the corresponding feature; all other features
-continue to work.
-
-
-6. Data retention and deletion
-
-We keep no copies of your data. All data stays on your device and on the services you
-choose yourself. You may delete sessions, files or configuration at any time inside the
-app; uninstalling the app deletes all local data.
+Denying a permission only disables the corresponding feature; all other features continue
+to work.
 
 
-7. Children's privacy
+6. Data sharing and third parties
 
-Codelint is intended for developers, not for children under 13, and we do not knowingly
-collect personal information from children.
+We share data with third parties only when necessary:
+
+- Apple: Sign in with Apple (identity verification) and in-app purchase (subscription
+  verification), subject to Apple's privacy policy
+- Model providers: only when you use a built-in model, our server relays your request
+- Email provider: to send sign-in verification codes and feedback receipts
+
+Other than the cases above and where required by law, we do not provide your data to third
+parties.
 
 
-8. Changes to this policy
+7. Retention and deletion
 
-If we make material changes to this policy, we will note them in the release notes of a
-new version and update the effective date at the top.
+- On-device data: you may delete sessions, files or configuration inside the app at any
+  time; uninstalling the app deletes all local data.
+- Account data (email, Apple user identifier, subscription tier, quota and usage, sign-in
+  device records): retained while your account exists. You may request account deletion by
+  emailing codelint@foxmail.com; we will delete or anonymize the data within 15 business
+  days, except where retention is required by law.
+- The server does not store conversation content, so there is no conversation copy to
+  delete separately.
 
 
-9. Contact us
+8. Security
 
-If you have any questions about this policy, please contact: codelint@foxmail.com
+- Communication between the app and our server uses HTTPS (TLS) encryption.
+- Sign-in credentials are stored in the system Keychain; model keys and SSH keys are stored
+  in the Keychain or the local sandbox according to your choice.
+- Server-side account data is stored on a least-privilege basis and access is restricted.
+
+
+9. Children's privacy
+
+Codelint is intended for developers and is not directed to children under 16. We do not
+knowingly collect personal information from children. If you believe a child has provided
+personal information to us, please contact us and we will delete it.
+
+
+10. Changes to this policy
+
+If we make material changes to this policy, we will note them in the release notes of a new
+version and update the effective date at the top. Continued use means you accept the
+updated policy.
+
+
+11. Contact us
+
+For questions about this policy, or to access or delete your personal information, please
+contact: codelint@foxmail.com
