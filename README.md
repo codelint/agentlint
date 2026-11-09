@@ -36,7 +36,7 @@ SwiftUI + SwiftData，Swift 5.0。
 | 繁体中文 | [privacy/privacy-zh-Hant.txt](privacy/privacy-zh-Hant.txt) |
 | English | [privacy/privacy-en.txt](privacy/privacy-en.txt) |
 
-生效日期：2026-10-20
+生效日期：2026-11-09
 
 ## 使用条款
 
@@ -46,7 +46,7 @@ SwiftUI + SwiftData，Swift 5.0。
 | 繁体中文 | [terms/terms-zh-Hant.txt](terms/terms-zh-Hant.txt) |
 | English | [terms/terms-en.txt](terms/terms-en.txt) |
 
-生效日期：2026-10-20
+生效日期：2026-11-09
 
 ## 联系方式
 

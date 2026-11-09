@@ -1,6 +1,6 @@
 Terms of Use for Codelint
 
-Effective date: 2026-10-20
+Effective date: 2026-11-09
 
 These Terms of Use ("Terms") are an agreement between you and Codelint ("we", "us")
 regarding your use of the Codelint iOS / iPadOS application ("the App"). By downloading,
