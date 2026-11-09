@@ -25,8 +25,8 @@ not collect, store or upload your files, source code or conversation content.
 
 2.1 Account information (collected when you sign in)
 
-Signing in is optional: the full feature set of bring-your-own-model works without an
-account.
+The app shows only the sign-in screen until you sign in: both built-in models and
+bring-your-own-model require an account.
 
 - Sign in with Apple: we receive the user identifier (sub) provided by Apple, plus your
   email (which may be Apple's private relay address) and name if you choose to share them.

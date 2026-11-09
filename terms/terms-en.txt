@@ -49,9 +49,9 @@ the App Store.
 3.4 After changing devices or reinstalling, you can restore your subscription with the
     "Restore Purchases" action in the App.
 3.5 Refunds are handled by Apple under its policies. We cannot issue refunds directly.
-3.6 Subscription quota resets each calendar month. Unused quota does not roll over, has no
-    cash value and is non-refundable, except where required by law or expressly stated by
-    us.
+3.6 Subscription quota resets each subscription period (matching Apple's renewal period).
+    Unused quota does not roll over, has no cash value and is non-refundable, except where
+    required by law or expressly stated by us.
 
 
 4. Acceptable use
